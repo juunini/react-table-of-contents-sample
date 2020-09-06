@@ -1,0 +1,38 @@
+.table-of-contents
+  display: flex
+  align-items: flex-start
+
+  .scroll-anchor-area
+    position: sticky
+    top: 2rem
+    display: flex
+    width: 25%
+    min-width: 25%
+    padding-left: 2rem
+    flex-grow: 0
+    flex-direction: column
+
+    li
+      margin-bottom: 0.5rem
+      
+    a
+      cursor: pointer
+      color: inherit
+      text-decoration: none
+      transition: 600ms ease
+
+      &.active
+        margin-left: -0.6rem
+        font-size: 1.1rem
+        font-weight: bold
+
+  .scroll-anchor-area + .contents-area
+    padding-left: 2rem
+
+  .contents-area + .scroll-anchor-area
+    padding-left: 2rem
+
+//@media only screen and (max-width: 600px)
+//  .table-of-contents
+//    .scroll-anchor-area
+//      display: none
